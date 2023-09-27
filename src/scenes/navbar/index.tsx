@@ -4,7 +4,6 @@ import Logo from "@/assets/Logo.svg";
 import Link from "./Link";
 import { SelectedPage } from "@/shared/types";
 import useMediaQuery from "@/hooks/useMediaQuery";
-import ActionButton from "@/shared/ActionButton";
 import { useState } from "react";
 
 
@@ -21,7 +20,6 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
   const navbarBackground = isTopOfPage ? "": "bg-primary-300 drop-shadow"
 
   return (
-    <>
     <nav>
       <div className={`${navbarBackground} ${flexbetween} fixed top-0 z-30 w-full py-6 bg-black`}>
         {/* <div className={`${flexbetween} mx-auto w-5/6`} > */}
@@ -103,17 +101,6 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
         </div>
       )}
     </nav>
-
-    
-    {/* <div >
-      <
-      <div className={`${flexbetween} flex-col` } >
-        <ActionButton setSelectedPage={setSelectedPage} >Schedule an appointment</ActionButton>
-        <button>Explore services</button>
-      </div>
-    </div> */}
-    
-    </>
   )
 }
 
