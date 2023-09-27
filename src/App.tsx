@@ -9,7 +9,7 @@ import Contact from "@/scenes/contact";
 
 function App() {
 
-  const [selectedPage, setSelectedPage] = useState<string>(SelectedPage.Home);
+  const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Home);
   const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true);
 
   useEffect(() => {
@@ -32,18 +32,10 @@ function App() {
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage} 
       />
-      <Home
-        setSelectedPage={setSelectedPage}>
-      </Home>
-      <About
-        setSelectedPage={setSelectedPage}>
-      </About>
-      <Services
-        setSelectedPage={setSelectedPage}>
-      </Services>
-      <Contact
-        setSelectedPage={setSelectedPage}>
-      </Contact>
+      <Home setSelectedPage={setSelectedPage} />
+      <About setSelectedPage={setSelectedPage} />
+      <Services setSelectedPage={setSelectedPage} />
+      <Contact setSelectedPage={setSelectedPage} />
     </div>
   )
 }
