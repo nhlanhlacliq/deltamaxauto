@@ -31,6 +31,9 @@ export default {
         //   "linear-gradient(90deg, #FF616A 0%, #FFC837 100%)",
         "home": "url('./assets/Home.png')",
         "rover": "url('./assets/rover.jpeg')",
+        "about": "url('./assets/Headlight.jpeg')",
+        "services": "url('./assets/engine.jpeg')",
+        "contact": "url('./assets/jag.jpeg')",
       }),
       top: (theme) => ({
         neg: "-24px"

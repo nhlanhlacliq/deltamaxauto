@@ -1,7 +1,6 @@
 import ActionButton from "@/shared/ActionButton";
 import { SelectedPage } from "@/shared/types";
 import { motion } from "framer-motion"
-import jag from '@/assets/jag.jpeg';
 import SectionImage from "@/shared/SectionImage";
 
 type Props = {
@@ -66,7 +65,7 @@ const Contact = ({setSelectedPage}: Props) => {
               </div>
               
               {/* Right Side */}
-              <SectionImage image={jag} />
+              <SectionImage image='bg-contact' />
             
             </div>
 

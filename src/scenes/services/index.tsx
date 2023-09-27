@@ -1,7 +1,6 @@
 import ActionButton from '@/shared/ActionButton';
 import { SelectedPage } from '@/shared/types';
 import { motion } from 'framer-motion';
-import engine from '@/assets/engine.jpeg';
 import SectionImage from '@/shared/SectionImage';
 // import gear from '@/assets/Icon_gear.svg';
 // import laptop from '@/assets/Icon_laptop.svg';
@@ -85,7 +84,7 @@ const Services = ({setSelectedPage}: Props) => {
               </div>
               
               {/* Right Side */}
-              <SectionImage image={engine} />
+              <SectionImage image='bg-services' />
             
             </div>
 

@@ -1,4 +1,3 @@
-import Headlight from "@/assets/Headlight.jpeg"
 import Logo_bmw from "@/assets/Logo_bmw.svg"
 import Logo_Jaguar from "@/assets/Logo_Jaguar.svg"
 import Logo_landrover from "@/assets/Logo_landrover.svg"
@@ -71,7 +70,7 @@ const About = ({setSelectedPage}: Props) => {
               </div>
               
               {/* Right Side */}
-              <SectionImage image={Headlight} />
+              <SectionImage image='bg-about' />
             </div>
 
         </motion.div>
