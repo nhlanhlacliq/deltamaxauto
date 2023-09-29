@@ -13,7 +13,7 @@ type Props = {
 
 const About = ({setSelectedPage}: Props) => {
   return (
-    <section id="about" className="mx-auto min-h-full w-5/6 lg:w-4/6 py-20 bg-white">
+    <section id="about" className="mx-auto min-h-full w-5/6 lg:w-4/6 py-10 bg-white">
         {/* Highlights where we are on navigation */}
         <motion.div onViewportEnter={() => setSelectedPage(SelectedPage.About)}>
 

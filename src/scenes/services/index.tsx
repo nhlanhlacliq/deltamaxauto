@@ -13,7 +13,7 @@ type Props = {
 
 const Services = ({setSelectedPage}: Props) => {
   return (
-    <section id="services" className="mx-auto min-h-full w-5/6 lg:w-4/6 py-20">
+    <section id="services" className="mx-auto min-h-full w-5/6 lg:w-4/6 py-10">
         {/* Highlights where we are on navigation */}
         <motion.div onViewportEnter={() => setSelectedPage(SelectedPage.Services)}>
             
