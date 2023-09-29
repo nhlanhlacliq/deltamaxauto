@@ -5,6 +5,7 @@ import Home from "@/scenes/home";
 import About from "@/scenes/about";
 import Services from "@/scenes/services";
 import Contact from "@/scenes/contact";
+import Footer from "@/scenes/footer";
 
 
 function App() {
@@ -35,6 +36,8 @@ function App() {
       <About setSelectedPage={setSelectedPage} />
       <Services setSelectedPage={setSelectedPage} />
       <Contact setSelectedPage={setSelectedPage} />
+  
+      <Footer />
     </div>
   )
 }
