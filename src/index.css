@@ -13,4 +13,6 @@ body,
     width: 100%;
     font-family: "GILL SANS", sans-serif;
     @apply text-black-100;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
 }
