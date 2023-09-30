@@ -16,12 +16,13 @@ const Home = ({setSelectedPage}: Props) => {
   return (
     <section id="home"
     // className='gap-16 bg-black py-10 md:h-full md:pb-0'>
-    className='gap-16 bg-black py-10 h-full md:pb-0'>
+    className='gap-16 bg-black py-0 sm:py-10 h-full md:pb-0'>
       {/* IMAGE and MAIN HEADER */}
       <motion.div onViewportEnter={() => setSelectedPage(SelectedPage.Home)}>
 
         {/* BACKGROUND IMAGE */} 
-        <div className='h-screen bg-rover bg-cover bg-no-repeat bg-center bg-fixed relative flex flex-col justify-center items-center '>
+        {/* <div className='h-screen bg-rover bg-cover bg-no-repeat bg-center bg-fixed relative flex flex-col justify-center items-center '> */}
+        <div className='h-screen bg-rover bg-cover bg-no-repeat bg-center relative flex flex-col justify-center items-center '>
           {
             isAboveMediumScreens 
               ? ( <div className='absolute left-0 w-4/6 h-full py-[20%] pl-[15%] bg-gradient-to-r from-black from-20% to-transparent '>

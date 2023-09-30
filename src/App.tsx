@@ -6,6 +6,7 @@ import About from "@/scenes/about";
 import Services from "@/scenes/services";
 import Contact from "@/scenes/contact";
 import Footer from "@/scenes/footer";
+import {Helmet} from 'react-helmet';
 
 
 function App() {
@@ -26,7 +27,17 @@ function App() {
   }, []);
 
   return (
+    // <Head title="Hello">
+
+    // />
+
     <div className='app bg-black'>
+      <Helmet>
+        <meta charSet="utf-8"/>
+        <title>DeltaMax Auto</title>
+        <meta name="description" content="Jaguar Landrover Range Rover BMW repairs maintenacne service"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"></meta>
+      </Helmet>
       <Navbar
         isTopOfPage={isTopOfPage} 
         selectedPage={selectedPage}

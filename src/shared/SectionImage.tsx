@@ -3,14 +3,13 @@ type Props = {
 }
 
 const SectionImage = ({image}: Props) => {
-  console.log(image);
   
   return (
     // <div className='h-screen bg-rover bg-cover bg-no-repeat bg-center bg-fixed relative flex flex-col justify-center items-center '>
     // <div className={`${image} h-full bg-cover bg-no-repeat bg-center bg-fixed relative flex flex-col justify-center items-center`}>
     <div className="md:w-[50%] w-[100%]">
       
-      <div className={`${image} md:h-[100%] h-[400px] bg-cover bg-no-repeat bg-right relative flex `}>
+      <div className={`${image} md:h-[100%] h-[200px] sm:h-[400px] bg-cover bg-no-repeat bg-right relative flex `}>
     </div>
     
     {/* <div className="md:w-[50%] max-h-full overflow-y-hidden">
