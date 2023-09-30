@@ -23,9 +23,8 @@ const Services = ({setSelectedPage}: Props) => {
               <div className="flex flex-col md:w-[50%] gap-4 sm:gap-8">
                 {/* Header */}
                 <div className=" font-semibold text-2xl">
-                  <p>Comprehensive Auto Repairs</p>
+                  <p>Comprehensive auto repair</p>
                 </div>
-                
                 {/* Services */}
                 <div className="flex flex-col justify-between gap-2 sm:gap-5">
                   {/* Logos
