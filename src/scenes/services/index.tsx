@@ -78,7 +78,7 @@ const Services = ({setSelectedPage}: Props) => {
                   
                 </div>
 
-                {!isAboveSmallScreens &&
+                {isAboveSmallScreens &&
                   <SectionImage image='bg-services' />
                 }
 
