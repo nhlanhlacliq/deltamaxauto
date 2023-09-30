@@ -13,6 +13,7 @@ type Props = {
 
 const Contact = ({setSelectedPage}: Props) => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)")
+  const isAboveSmallScreens = useMediaQuery("(min-width: 768px)")
 
   return (
     <SectionLayout id="contact">
@@ -21,7 +22,7 @@ const Contact = ({setSelectedPage}: Props) => {
             
         <div className="flex flex-col md:flex-row mt-0 sm:mt-20 gap-5 sm:gap-20 my-auto" >
               {/* Left Side */}
-              <div className="flex flex-col md:w-[50%] max-w-[600px] gap-8 sm:gap-8">
+              <div className="flex flex-col md:w-[50%] max-w-[600px] gap-5 sm:gap-8">
                 {/* Header */}
                 <div className=" font-semibold text-2xl">
                   <p>Contact us</p>
@@ -30,23 +31,24 @@ const Contact = ({setSelectedPage}: Props) => {
                 {/* Form */}
                 <div className="flex flex-col justify-between gap-2 sm:gap-6">
                   <form action="">
-                    <div className="flex flex-col gap-3 sm:gap-7">
+                    <div className="flex flex-col gap-5 sm:gap-7">
+                      <div className="flex flex-col gap-2 sm:gap-7" >
+                        <div className="flex flex-col sm:gap-1">
+                          <label htmlFor="name">Name</label>
+                          <input className="h-8 border rounded-sm border-slate-100 "
+                          type="text" value="" />
+                        </div>
+                        
+                        <div className="flex flex-col gap-1">
+                          <label htmlFor="name">Contact</label>
+                          <input className="h-8 border rounded-sm border-slate-100 "
+                          type="text" value=""/>
+                        </div>
 
-                      <div className="flex flex-col sm:gap-1">
-                        <label htmlFor="name">Name</label>
-                        <input className="h-8 border rounded-sm border-slate-100 "
-                        type="text" value="" />
-                      </div>
-                      
-                      <div className="flex flex-col gap-1">
-                        <label htmlFor="name">Contact</label>
-                        <input className="h-8 border rounded-sm border-slate-100 "
-                        type="text" value=""/>
-                      </div>
-
-                      <div className="flex flex-col gap-1">
-                        <label htmlFor="name">Message</label>
-                        <textarea className="h-16 border rounded-sm border-slate-100 " name="message" id="message"></textarea>
+                        <div className="flex flex-col gap-1">
+                          <label htmlFor="name">Message</label>
+                          <textarea className="h-16 border rounded-sm border-slate-100 " name="message" id="message"></textarea>
+                        </div>
                       </div>
                     
                       {/* Actions */}
@@ -58,7 +60,6 @@ const Contact = ({setSelectedPage}: Props) => {
                     </div>
                   </form>
                 </div>
-
 
                 {/* Details */}
                 <div className="flex justify-between md:flex-col md:gap-6">
@@ -129,7 +130,9 @@ const Contact = ({setSelectedPage}: Props) => {
               </div>
               
               {/* Right Side */}
-              <SectionImage image='bg-contact' />
+              {isAboveSmallScreens && 
+                <SectionImage image='bg-contact' />
+              }
             
             </div>
 

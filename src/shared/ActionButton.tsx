@@ -11,13 +11,13 @@ type Props = {
 
 const ActionButton = ({ children, setSelectedPage, alternateColor = false, gotoPage }: Props) => {
   return (
-    <AnchorLink
-        className={` ${alternateColor ? ' bg-black outline outline-1 outline-gray-600': ' bg-primary-500 '} rounded-sm px-10 py-2 hover:bg-primary-300 text-white hover:text-white text-center`}
-        onClick={() => setSelectedPage(gotoPage)}
-        href={`#${gotoPage}`}
-    >
-        {children}
-    </AnchorLink>
+      <AnchorLink
+          className={` ${alternateColor ? ' bg-black outline outline-1 outline-gray-600': ' bg-primary-500 '} rounded-sm px-10 py-2 hover:bg-primary-300 text-white hover:text-white text-center inline-block w-full`}
+          onClick={() => setSelectedPage(gotoPage)}
+          href={`#${gotoPage}`}
+          >
+          {children}
+      </AnchorLink>
   )
 }
 

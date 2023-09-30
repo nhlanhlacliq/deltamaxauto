@@ -1,6 +1,7 @@
 import Logo_bmw from "@/assets/Logo_bmw.svg"
 import Logo_Jaguar from "@/assets/Logo_Jaguar.svg"
 import Logo_landrover from "@/assets/Logo_landrover.svg"
+import useMediaQuery from "@/hooks/useMediaQuery";
 import ActionButton from "@/shared/ActionButton";
 import SectionImage from "@/shared/SectionImage";
 import SectionLayout from "@/shared/SectionLayout";
@@ -12,6 +13,8 @@ type Props = {
 };
 
 const About = ({setSelectedPage}: Props) => {
+  const isAboveSmallScreens = useMediaQuery("(min-width: 768px)")
+
   return (
     <SectionLayout id="about">
         {/* Highlights where we are on navigation */}
@@ -61,6 +64,11 @@ const About = ({setSelectedPage}: Props) => {
                   </p>
                 </div>
 
+                {!isAboveSmallScreens && 
+                  <SectionImage image='bg-about' />
+                }
+
+
                 {/* Actions */}
                 <motion.div initial="hidden" whileInView="visible" viewport={{once: false, amount:0.5}} transition={{delay:0, duration: 0.25}} variants={{hidden: {opacity: 0, x:-50}, visible: {opacity: 1, x:0}}}>
                   <ActionButton setSelectedPage={setSelectedPage} gotoPage={SelectedPage.Services} >
@@ -70,7 +78,9 @@ const About = ({setSelectedPage}: Props) => {
               </div>
               
               {/* Right Side */}
-              <SectionImage image='bg-about' />
+              {isAboveSmallScreens &&
+                <SectionImage image='bg-about' />
+              }
             </div>
 
         </motion.div>

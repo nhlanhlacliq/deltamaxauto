@@ -3,6 +3,7 @@ import { SelectedPage } from '@/shared/types';
 import { motion } from 'framer-motion';
 import SectionImage from '@/shared/SectionImage';
 import SectionLayout from '@/shared/SectionLayout';
+import useMediaQuery from '@/hooks/useMediaQuery';
 // import gear from '@/assets/Icon_gear.svg';
 // import laptop from '@/assets/Icon_laptop.svg';
 // import tools from '@/assets/Icon_tools.svg';
@@ -13,6 +14,8 @@ type Props = {
 };
 
 const Services = ({setSelectedPage}: Props) => {
+  const isAboveSmallScreens = useMediaQuery("min-width: 768px")
+
   return (
     <SectionLayout id="services">
         {/* Highlights where we are on navigation */}
@@ -75,6 +78,10 @@ const Services = ({setSelectedPage}: Props) => {
                   
                 </div>
 
+                {!isAboveSmallScreens &&
+                  <SectionImage image='bg-services' />
+                }
+
                 {/* Actions */}
                 <motion.div className='' initial="hidden" whileInView="visible" viewport={{once: false, amount:0.5}} transition={{delay:0, duration: 0.25}} variants={{hidden: {opacity: 0, x:-50}, visible: {opacity: 1, x:0}}}>
                   <ActionButton setSelectedPage={setSelectedPage} gotoPage={SelectedPage.Contact} >
@@ -84,7 +91,9 @@ const Services = ({setSelectedPage}: Props) => {
               </div>
               
               {/* Right Side */}
-              <SectionImage image='bg-services' />
+              {!isAboveSmallScreens &&
+                <SectionImage image='bg-services' />
+              }
             
             </div>
 

@@ -35,15 +35,15 @@ const DetailsView = ({setSelectedPage}: Props) => {
                     </div>
                 </motion.div>
             
-                <motion.div className={`flex items-center justify-between flex-col relative mt-6 mb-8 text-xl/7 text-slate-300 font-normal mx-8`} initial="hidden" whileInView="visible" viewport={{once: true, amount:0.5}} transition={{delay: 0.2, duration: 0.5}} variants={{hidden: {opacity: 0, x:-50}, visible: {opacity: 1, x:0}}}>
+                <motion.div className={`flex items-center justify-between flex-col relative mt-6 mb-8 text-slate-300 font-normal mx-8`} initial="hidden" whileInView="visible" viewport={{once: true, amount:0.5}} transition={{delay: 0.2, duration: 0.5}} variants={{hidden: {opacity: 0, x:-50}, visible: {opacity: 1, x:0}}}>
                     <p>
-                        Our customer's
+                        Driven by excellence,
                     </p>
                     <p>
-                        trust us because
+                        quality service and
                     </p>
                     <p>
-                        they know their stuff
+                        affordable prices
                     </p>
                 </motion.div>
 

@@ -40,6 +40,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                   setSelectedPage={setSelectedPage}
                   isMenuToggled={isMenuToggled}
                   setIsMenuToggled={setIsMenuToggled}
+                  isAboveMediumScreens={isAboveMediumScreens}
                 />
                 <Link 
                   page='About'
@@ -47,6 +48,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                   setSelectedPage={setSelectedPage}
                   isMenuToggled={isMenuToggled}
                   setIsMenuToggled={setIsMenuToggled}
+                  isAboveMediumScreens={isAboveMediumScreens}
                   />
                 <Link 
                   page='Services'
@@ -54,6 +56,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                   setSelectedPage={setSelectedPage}
                   isMenuToggled={isMenuToggled}
                   setIsMenuToggled={setIsMenuToggled}
+                  isAboveMediumScreens={isAboveMediumScreens}
                   />
                 <Link 
                   page='Contact'
@@ -61,6 +64,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                   setSelectedPage={setSelectedPage}
                   isMenuToggled={isMenuToggled}
                   setIsMenuToggled={setIsMenuToggled}
+                  isAboveMediumScreens={isAboveMediumScreens}
                   />
               </div>
             </div>
@@ -96,25 +100,29 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                   setSelectedPage={setSelectedPage}
                   isMenuToggled={isMenuToggled}
                   setIsMenuToggled={setIsMenuToggled}
+                  isAboveMediumScreens={isAboveMediumScreens}
                 />
                 <Link 
                   page='About'
                   selectedPage={selectedPage}
                   setSelectedPage={setSelectedPage}
                   isMenuToggled={isMenuToggled}
-                  setIsMenuToggled={setIsMenuToggled}/>
+                  setIsMenuToggled={setIsMenuToggled}
+                  isAboveMediumScreens={isAboveMediumScreens}/>
                 <Link 
                   page='Services'
                   selectedPage={selectedPage}
                   setSelectedPage={setSelectedPage}
                   isMenuToggled={isMenuToggled}
-                  setIsMenuToggled={setIsMenuToggled}/>
+                  setIsMenuToggled={setIsMenuToggled}
+                  isAboveMediumScreens={isAboveMediumScreens}/>
                 <Link 
                   page='Contact'
                   selectedPage={selectedPage}
                   setSelectedPage={setSelectedPage}
                   isMenuToggled={isMenuToggled}
-                  setIsMenuToggled={setIsMenuToggled}/>
+                  setIsMenuToggled={setIsMenuToggled}
+                  isAboveMediumScreens={isAboveMediumScreens}/>
               </div>
 
           </div>
