@@ -15,6 +15,11 @@ const Contact = ({setSelectedPage}: Props) => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)")
   const isAboveSmallScreens = useMediaQuery("(min-width: 768px)")
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any
+  // const onSubmit =async (e: any) => {
+  //   const isValid = await trigger()
+  // }
+
   return (
     <SectionLayout id="contact">
         {/* Highlights where we are on navigation */}
@@ -30,7 +35,7 @@ const Contact = ({setSelectedPage}: Props) => {
                 
                 {/* Form */}
                 <div className="flex flex-col justify-between gap-2 sm:gap-6">
-                  <form action="">
+                  <form target="_blank" onSubmit={onSubmit} action="">
                     <div className="flex flex-col gap-5 sm:gap-7">
                       <div className="flex flex-col gap-2 sm:gap-7" >
                         <div className="flex flex-col sm:gap-1">
