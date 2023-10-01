@@ -65,7 +65,7 @@ const Contact = ({setSelectedPage}: Props) => {
                       target="_blank" 
                       onSubmit={onSubmit} 
                       method="POST" 
-                      action="https://formsubmit.co/info@deltamaxauto.com">
+                      action="https://formsubmit.co/625fbef21a0327cd117262b6d960e086">
                       <div className="flex flex-col gap-5 sm:gap-7">
                         <div className="flex flex-col gap-2 sm:gap-7" >
                           

@@ -27,10 +27,6 @@ function App() {
   }, []);
 
   return (
-    // <Head title="Hello">
-
-    // />
-
     <div className='app bg-black'>
       <Helmet>
         <meta charSet="utf-8"/>
