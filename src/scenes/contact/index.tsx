@@ -1,10 +1,11 @@
-import ActionButton from "@/shared/ActionButton";
+import SubmitButton from "@/shared/SubmitButton";
 import { SelectedPage } from "@/shared/types";
 import { motion } from "framer-motion"
 import SectionImage from "@/shared/SectionImage";
 import whatsapp from "@/assets/whatsapp.png";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import SectionLayout from "@/shared/SectionLayout";
+import { useForm } from "react-hook-form";
 
 
 type Props = {
@@ -14,10 +15,20 @@ type Props = {
 const Contact = ({setSelectedPage}: Props) => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)")
   const isAboveSmallScreens = useMediaQuery("(min-width: 768px)")
+  const inputStyles = `px-1 border border-b-2 border-t-0 border-x-0 text-gray-700 border-slate-100 font-light `;
+
+  const {
+    register, 
+    trigger, 
+    formState: {errors}
+    } = useForm();
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any
   const onSubmit =async (e: any) => {
-    // const isValid = await trigger()
+    const isValid = await trigger();
+    if(!isValid) {
+      e.preventDefault();
+    }
     console.log(e);
     
   }
@@ -27,55 +38,102 @@ const Contact = ({setSelectedPage}: Props) => {
         {/* Highlights where we are on navigation */}
         <motion.div onViewportEnter={() => setSelectedPage(SelectedPage.Contact)}>
             
-        <div className="flex flex-col md:flex-row mt-0 sm:mt-20 gap-5 sm:gap-20 my-auto" >
+            <div className="flex flex-col md:flex-row mt-0 sm:mt-20 gap-5 sm:gap-20 my-auto" >
               {/* Left Side */}
-              <div className="flex flex-col md:w-[50%] max-w-[600px] gap-5 sm:gap-8">
+              <div className="flex flex-col md:w-[50%]  gap-5 sm:gap-8">
                 {/* Header */}
                 <div className=" font-semibold text-2xl">
                   <p>Contact us</p>
                 </div>
 
-                <div className="text-sm sm:text-base leading-4 sm:leading-normal text-gray-800">
-                  <p>
-                  At DeltaMax Auto, our services are more than just repairs; they're a commitment to excellence and customer satisfaction.
-                  </p>
-                </div>
+                <motion.div initial="hidden" whileInView="visible" 
+                        viewport={{once: false, amount:0.5}} 
+                        transition={{delay:0, duration: 0.25}} 
+                        variants={{hidden: {opacity: 0, y:-50}, 
+                        visible: {opacity: 1, y:0}}} 
+                        className="flex flex-col gap-4">
+                  <div className="text-sm sm:text-base leading-4 sm:leading-normal text-gray-800">
+                    <p>
+                    At DeltaMax Auto, our services are more than just repairs; 
+                    they're a commitment to excellence and customer satisfaction. How can we help you?
+                    </p>
+                  </div>
                 
-                {/* Form */}
-                <div className="flex flex-col justify-between gap-2 sm:gap-6">
-                  <form target="_blank" onSubmit={onSubmit} action="">
-                    <div className="flex flex-col gap-5 sm:gap-7">
-                      <div className="flex flex-col gap-2 sm:gap-7" >
-                        <div className="flex flex-col sm:gap-1">
-                          <label htmlFor="name">Name</label>
-                          <input className="h-8 border rounded-sm border-slate-100 "
-                          type="text" value="" />
-                        </div>
-                        
-                        <div className="flex flex-col gap-1">
-                          <label htmlFor="name">Contact</label>
-                          <input className="h-8 border rounded-sm border-slate-100 "
-                          type="text" value=""/>
-                        </div>
+                  {/* Form */}
+                  <div className="flex flex-col justify-between gap-2 sm:gap-6">
+                    <form 
+                      target="_blank" 
+                      onSubmit={onSubmit} 
+                      method="POST" 
+                      action="https://formsubmit.co/625fbef21a0327cd117262b6d960e086">
+                      <div className="flex flex-col gap-5 sm:gap-7">
+                        <div className="flex flex-col gap-2 sm:gap-7" >
+                          
+                          <div className="flex flex-col sm:gap-1">
+                            <label htmlFor="name">Name</label>
+                            <input id="name" className={`${inputStyles} h-8`}
+                              type="text" 
+                              {...register("name", {
+                                required: true,
+                                maxLength: 100,
+                              })}
+                            />
+                            {errors.name && (
+                              <p className="mt-1 text-primary-300">
+                                {errors.name.type === "required" && "This field is required."}
+                                {errors.name.type === "maxLength" && "Max length is 100 char."}
+                              </p>
+                            )}
+                          </div>
+                          
+                          <div className="flex flex-col gap-1">
+                            <label htmlFor="contact">Contact</label>
+                            <input id="contact" className={`${inputStyles} h-8`}
+                            type="text"
+                            {...register("contact", {
+                              required: true,
+                            })}
+                          />
+                          {errors.contact && (
+                            <p className="mt-1 text-primary-300">
+                              {errors.contact.type === "required" && "This field is required."}
+                            </p>
+                          )}
+                          </div>
 
-                        <div className="flex flex-col gap-1">
-                          <label htmlFor="name">Message</label>
-                          <textarea className="h-16 border rounded-sm border-slate-100 " name="message" id="message"></textarea>
+                          <div className="flex flex-col sm:gap-1">
+                            <label htmlFor="message">Message</label>
+                            <textarea id="message" className={`${inputStyles} h-16`} 
+                              {...register("message", {
+                                required: true,
+                                maxLength: 2000,
+                              })}
+                            />
+                            {errors.message && (
+                              <p className="mt-1 text-primary-300">
+                                {errors.message.type === "required" && "This field is required."}
+                                {errors.message.type === "maxLength" && "Max length is 2000 char."}
+                              </p>
+                            )}
+                          </div>
                         </div>
+                      
+                        {/* Actions */}
+                        <motion.div initial="hidden" whileInView="visible" 
+                          viewport={{once: false, amount:0.5}} 
+                          transition={{delay:0, duration: 0.5}} 
+                          variants={{hidden: {opacity: 0, x:-50}, 
+                          visible: {opacity: 1, x:0}}} >
+                            <SubmitButton>
+                              Send
+                            </SubmitButton>
+                        </motion.div>
                       </div>
-                    
-                      {/* Actions */}
-                      <motion.div initial="hidden" whileInView="visible" viewport={{once: false, amount:0.5}} transition={{delay:0, duration: 0.25}} variants={{hidden: {opacity: 0, x:-50}, visible: {opacity: 1, x:0}}} >
-                        <ActionButton setSelectedPage={setSelectedPage} gotoPage={SelectedPage.Home} >
-                          Send
-                        </ActionButton>
-                      </motion.div>
-                    </div>
-                  </form>
-                </div>
+                    </form>
+                  </div>
 
-                {/* Details */}
-                <div className="flex justify-between md:flex-col md:gap-6 text-sm sm:text-base">
+                  {/* Details */}
+                  <div className="flex justify-between md:flex-col md:gap-6 mt-4 text-sm sm:text-base">
                     <div className="flex flex-col gap-6 underline">
                         {/* Phone */}
                         <div className="flex gap-2 sm:gap-6">
@@ -145,7 +203,8 @@ const Contact = ({setSelectedPage}: Props) => {
                         </a>
                       </div>
                     </div>
-                </div>
+                  </div>
+                </motion.div>
               </div>
               
               {/* Right Side */}
