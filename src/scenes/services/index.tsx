@@ -14,7 +14,7 @@ type Props = {
 };
 
 const Services = ({setSelectedPage}: Props) => {
-  const isAboveSmallScreens = useMediaQuery("min-width: 768px")
+  const isAboveSmallScreens = useMediaQuery("(min-width: 768px)")
 
   return (
     <SectionLayout id="services">
@@ -91,10 +91,9 @@ const Services = ({setSelectedPage}: Props) => {
               </div>
               
               {/* Right Side */}
-              {isAboveSmallScreens &&
+              {isAboveSmallScreens && 
                 <SectionImage image='bg-services' />
               }
-            
             </div>
 
         </motion.div>
