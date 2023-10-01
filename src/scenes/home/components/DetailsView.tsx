@@ -54,9 +54,9 @@ const DetailsView = ({setSelectedPage}: Props) => {
                         Schedule an appointment
                     </ActionButton>
 
-                    <ActionButton setSelectedPage={setSelectedPage} alternateColor={true} gotoPage={SelectedPage.Services} >    
+                    <ActionButton setSelectedPage={setSelectedPage} alternateColor={true} gotoPage={SelectedPage.About} >    
                         <p className='text-sm  text-black500'>
-                            Explore Services
+                            Learn more
                         </p>
                     </ActionButton>
 

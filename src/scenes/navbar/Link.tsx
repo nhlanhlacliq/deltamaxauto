@@ -14,6 +14,8 @@ type Props = {
 
 const Link = ({page, selectedPage, setSelectedPage, isMenuToggled, setIsMenuToggled, isAboveMediumScreens }: Props) => {
   const lowerCasePage = page.toLowerCase().replace(/ /g, "") as SelectedPage;  
+  const borderBottom = isAboveMediumScreens ? "" : "border-b-2 border-black-200 pb-4"
+  
   return (
     <AnchorLink
       className={`${selectedPage === lowerCasePage ? "text-primary-500" : ""}
@@ -24,7 +26,7 @@ const Link = ({page, selectedPage, setSelectedPage, isMenuToggled, setIsMenuTogg
         setIsMenuToggled(!isMenuToggled);
       }}
     >
-      <div className="flex justify-between border-b-2 border-black-200 pb-4">
+      <div className={`flex justify-between ${borderBottom} `}>
         {page}
         
         { !isAboveMediumScreens &&

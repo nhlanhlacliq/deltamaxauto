@@ -50,18 +50,18 @@ const Services = ({setSelectedPage}: Props) => {
                     </p>
                     {/* Text */}
                     <p className='text-sm sm:text-base leading-4 sm:leading-normal text-gray-800'>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et lobortis erat. Nunc eleifend, ex ac laoreet imperdiet, mi diam efficitur mauris, quis consectetur ipsum leo vel tortor. Donec aliquam, enim ac vehicula rutrum, leo nulla malesuada massa, eu maximus nulla dui a libero. Nulla tortor enim, posuere at dignissim eu, tincidunt nec dolor.
+                    When your vehicle's warning lights come on, it's time to bring it to us for diagnostics. Our state-of-the-art equipment and experienced technicians will identify and rectify any issues, ensuring your vehicle's systems are calibrated for optimal performance.
                     </p>
                   </div>
 
                   <div>
                     {/* Header */}
                     <p className='font-semibold text-xl'>
-                        Maintenance
+                        Service
                     </p>
                     {/* Text */}
                     <p className='text-sm sm:text-base leading-4 sm:leading-normal text-gray-800'>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et lobortis erat. Nunc eleifend, ex ac laoreet imperdiet, mi diam efficitur mauris, quis consectetur ipsum leo vel tortor. Donec aliquam, enim ac vehicula rutrum, leo nulla malesuada massa, eu maximus nulla dui a libero. Nulla tortor enim, posuere at dignissim eu, tincidunt nec dolor.
+                    Regular maintenance is key to a long-lasting and reliable vehicle. We provide major and minor services, renewing essential components such as oil, filters, belts, pulleys, and more. Our complete inspections guarantee that your vehicle is in top shape.
                     </p>
                   </div>
 
@@ -72,7 +72,7 @@ const Services = ({setSelectedPage}: Props) => {
                     </p>
                     {/* Text */}
                     <p className='text-sm sm:text-base leading-4 sm:leading-normal text-gray-800'>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam et lobortis erat. Nunc eleifend, ex ac laoreet imperdiet, mi diam efficitur mauris, quis consectetur ipsum leo vel tortor. Donec aliquam, enim ac vehicula rutrum, leo nulla malesuada massa, eu maximus nulla dui a libero. Nulla tortor enim, posuere at dignissim eu, tincidunt nec dolor.
+                    When issues arise, our team is ready to tackle them head-on. We specialize in engine and transmission repairs, addressing overheating, coolant loss, vibrations, and more. Additionally, our expertise extends to gearbox repairs, handling harsh gear changes, warning lights, and unusual noises.
                     </p>
                   </div>
                   
@@ -84,7 +84,7 @@ const Services = ({setSelectedPage}: Props) => {
 
                 {/* Actions */}
                 <motion.div className='' initial="hidden" whileInView="visible" viewport={{once: false, amount:0.5}} transition={{delay:0, duration: 0.25}} variants={{hidden: {opacity: 0, x:-50}, visible: {opacity: 1, x:0}}}>
-                  <ActionButton setSelectedPage={setSelectedPage} gotoPage={SelectedPage.Contact} >
+                  <ActionButton setSelectedPage={setSelectedPage} gotoPage={SelectedPage.Contact} alternateColor={true} >
                     Contact us
                   </ActionButton>
                 </motion.div>

@@ -34,6 +34,12 @@ const Contact = ({setSelectedPage}: Props) => {
                 <div className=" font-semibold text-2xl">
                   <p>Contact us</p>
                 </div>
+
+                <div className="text-sm sm:text-base leading-4 sm:leading-normal text-gray-800">
+                  <p>
+                  At DeltaMax Auto, our services are more than just repairs; they're a commitment to excellence and customer satisfaction.
+                  </p>
+                </div>
                 
                 {/* Form */}
                 <div className="flex flex-col justify-between gap-2 sm:gap-6">
@@ -69,7 +75,7 @@ const Contact = ({setSelectedPage}: Props) => {
                 </div>
 
                 {/* Details */}
-                <div className="flex justify-between md:flex-col md:gap-6">
+                <div className="flex justify-between md:flex-col md:gap-6 text-sm sm:text-base">
                     <div className="flex flex-col gap-6 underline">
                         {/* Phone */}
                         <div className="flex gap-2 sm:gap-6">
@@ -79,10 +85,12 @@ const Contact = ({setSelectedPage}: Props) => {
                             </svg>
                           </div>
 
-                          <div>
-                            <p>
-                              060 841 8119
-                            </p>
+                          <div className="my-auto">
+                            <a href="tel:060 841 8119">
+                              <p>
+                                060 841 8119
+                              </p>
+                            </a>
                           </div>
 
                         </div>
@@ -93,10 +101,12 @@ const Contact = ({setSelectedPage}: Props) => {
                               <div className="mt-1">
                                 <img src={whatsapp} alt="whatsapp-logo" />
                               </div>
-                              <div>
-                                <p>
-                                  060 841 8119
-                                </p>
+                              <div className="my-auto" >
+                                <a href="https://wa.me/27608418119" target="_blank">
+                                  <p>
+                                    060 841 8119
+                                  </p>
+                                </a>
                               </div>
                             </>
                           :
@@ -124,6 +134,7 @@ const Contact = ({setSelectedPage}: Props) => {
                       </div>
 
                       <div className=" underline">
+                        <a href="https://maps.app.goo.gl/34AcaMjEv1eNz8qBA" target="_blank">
                           <p>
                               Unit D14/15 <br/>
                               Cnr, Brand Rd & Swart Dr <br/>
@@ -131,6 +142,7 @@ const Contact = ({setSelectedPage}: Props) => {
                               Midrand <br/>
 
                           </p>
+                        </a>
                       </div>
                     </div>
                 </div>

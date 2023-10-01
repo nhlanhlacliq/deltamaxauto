@@ -45,22 +45,15 @@ const About = ({setSelectedPage}: Props) => {
                 {/* Text */}
                 <div className="text-sm sm:text-base leading-4 sm:leading-normal text-gray-800">
                   <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Aliquam et lobortis erat.
-                  Nunc eleifend, ex ac laoreet imperdiet, mi diam efficitur mauris, quis consectetur ipsum leo vel tortor.
-                  Donec aliquam, enim ac vehicula rutrum, leo nulla malesuada massa, eu maximus nulla dui a libero.
-                  Nulla tortor enim, posuere at dignissim eu, tincidunt nec dolor. 
-                  Maecenas mi massa, suscipit vel ante ac, pulvinar commodo massa. 
-                  Praesent dictum, metus sed malesuada dapibus, neque erat mollis sem, non sagittis mauris est ac leo.
-                  Sed ac dignissim lacus. Aliquam eu diam vitae lorem porttitor cursus sed sit amet urna.
-                  Aliquam dignissim arcu et lorem iaculis dictum.
+                  At DeltaMax Auto, we're passionate about delivering exceptional service. Our journey began as Jaguar Landrover specialists with a commitment to excellence. With guidance from JLR's Global Technical Reference Manual, we've evolved into a modern automotive repair center that offers a wide range of services.
                   </p>
                   <br />
                   <p>
-                  Pellentesque gravida nulla id mi lobortis mollis.
-                  Maecenas convallis ante vitae velit gravida rhoncus.
-                  Nam et nisi dapibus tortor finibus laoreet. Proin mollis est ac mauris faucibus, id semper eros pulvinar.
-                  Sed et ipsum lacus. Nullam vel mattis enim, vel volutpat lectus. Integer maximus nibh non nunc suscipit, vitae vestibulum est euismod.
+                  Our team of skilled technicians specializes in engine and transmission repairs, brake and rotor replacements, electrical diagnosis, and general car maintenance. We're dedicated to maintaining dealership-level standards while making our services affordable. We're more than just an auto shop; we're a locally-owned business deeply connected to our community.
+                  </p>
+                  <br />
+                  <p>
+                  We prioritize customer satisfaction and community involvement, actively seeking opportunities for sponsorships and charitable contributions. 
                   </p>
                 </div>
 
@@ -71,7 +64,7 @@ const About = ({setSelectedPage}: Props) => {
 
                 {/* Actions */}
                 <motion.div initial="hidden" whileInView="visible" viewport={{once: false, amount:0.5}} transition={{delay:0, duration: 0.25}} variants={{hidden: {opacity: 0, x:-50}, visible: {opacity: 1, x:0}}}>
-                  <ActionButton setSelectedPage={setSelectedPage} gotoPage={SelectedPage.Services} >
+                  <ActionButton setSelectedPage={setSelectedPage} gotoPage={SelectedPage.Services} alternateColor={true} >
                     Explore Services
                   </ActionButton>
                 </motion.div>
