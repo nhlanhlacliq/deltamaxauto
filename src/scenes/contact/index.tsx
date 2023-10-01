@@ -16,9 +16,11 @@ const Contact = ({setSelectedPage}: Props) => {
   const isAboveSmallScreens = useMediaQuery("(min-width: 768px)")
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any
-  // const onSubmit =async (e: any) => {
-  //   const isValid = await trigger()
-  // }
+  const onSubmit =async (e: any) => {
+    // const isValid = await trigger()
+    console.log(e);
+    
+  }
 
   return (
     <SectionLayout id="contact">
