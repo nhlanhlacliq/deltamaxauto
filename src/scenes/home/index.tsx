@@ -22,7 +22,7 @@ const Home = ({setSelectedPage}: Props) => {
 
         {/* BACKGROUND IMAGE */} 
         {/* <div className='h-screen bg-rover bg-cover bg-no-repeat bg-center bg-fixed relative flex flex-col justify-center items-center '> */}
-        <div className='h-screen bg-rover bg-cover bg-no-repeat bg-fixed bg-center relative flex flex-col justify-center items-center '>
+        <div className='h-screen bg-rover bg-cover bg-no-repeat bg-center relative flex flex-col justify-center items-center '>
           {
             isAboveMediumScreens 
               ? ( <div className='absolute left-0 w-4/6 h-full py-[20%] pl-[15%] bg-gradient-to-r from-black from-20% to-transparent '>
