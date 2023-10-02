@@ -45,15 +45,22 @@ const About = ({setSelectedPage}: Props) => {
                 {/* Text */}
                 <div className="text-sm sm:text-base leading-4 sm:leading-normal text-gray-800">
                   <p>
-                  At DeltaMax Auto, we're passionate about delivering exceptional service. Our journey began as Jaguar Landrover specialists with a commitment to excellence. With guidance from JLR's Global Technical Reference Manual, we've evolved into a modern automotive repair center that offers a wide range of services.
+                  At DeltaMax Auto, we're passionate about delivering exceptional service. 
+                  Our journey began as Jaguar Landrover specialists with a commitment to excellence. 
+                  With guidance from JLR's Global Technical Reference Manual, we're evolving 
+                  into a modern automotive repair center that offers a wide range of services.
                   </p>
                   <br />
                   <p>
-                  Our team of skilled technicians specializes in engine and transmission repairs, brake and rotor replacements, electrical diagnosis, and general car maintenance. We're dedicated to maintaining dealership-level standards while making our services affordable. We're more than just an auto shop; we're a locally-owned business deeply connected to our community.
+                  Our team of skilled technicians specializes in engine and transmission repairs, 
+                  brake and rotor replacements, electrical diagnosis, and general car maintenance. 
+                  We're dedicated to maintaining dealership-level standards while making our services affordable. 
+                  We're more than just an auto shop - we're a locally-owned business deeply connected to our community.
                   </p>
                   <br />
                   <p>
-                  We prioritize customer satisfaction and community involvement, actively seeking opportunities for sponsorships and charitable contributions. 
+                  We prioritize customer satisfaction and community involvement, 
+                  actively seeking opportunities for sponsorships and charitable contributions. 
                   </p>
                 </div>
 
