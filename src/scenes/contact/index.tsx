@@ -46,7 +46,7 @@ const Contact = ({setSelectedPage}: Props) => {
                   <p>Contact us</p>
                 </div>
 
-                <motion.div initial="hidden" whileInView="visible" 
+                <motion.div initial="visible" whileInView="visible" 
                         viewport={{once: false, amount:0.5}} 
                         transition={{delay:0, duration: 0.25}} 
                         variants={{hidden: {opacity: 0, y:-50}, 
